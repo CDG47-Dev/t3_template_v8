@@ -1,0 +1,89 @@
+//
+// Gabarit
+// --------------------------------------------------
+html{
+	//Permet modifier la taille du texte en fonction des paramétres du navigateur
+	font-size: 100%;
+}
+.hors-cadre{
+	position:absolute;
+	left: -9999px;
+}
+//
+// Top Nav
+// --------------------------------------------------
+header{
+	min-height: @navbar-height;
+	.top-nav-container {
+		background-color: rgb(151, 215, 0);
+		height: @navbar-height;
+	}
+	.bandeau-top{
+		background-color: rgb(151, 215, 0);
+	}
+	.top-nav {
+		 display: block;
+		 height: @navbar-height;
+		 > div{
+			float: right;
+		}
+		ul {
+		    margin-bottom: 0;
+			li {
+				display: inline-block;
+				font-size: 0.6em;
+				list-style: outside none none;
+				padding-left: 10px;
+			}
+		}		
+	}
+	a {
+		color: #222;
+	}
+	#tx_indexedsearch{
+		.searchField {
+			background-color: #e1e1eb;
+			border-style: inherit;
+			border-width: 1px;
+		}
+	}
+
+	#tx_indexedsearch,
+	nav,
+	.cb-gtranslate{
+		display: inline-block;
+	}
+	.logo{
+		position: absolute;
+		left : 30px;
+		z-index: 2000;
+	}
+}
+
+//
+// Main Section
+// --------------------------------------------------
+.main-section{
+	.container{
+		background: rgba(255, 255, 255, 0.9);
+		
+	}
+}
+
+
+//
+// Background-slideshow
+// --------------------------------------------------
+.background-slideshow::after {
+    background: transparent url("../Images/backgrounds/pattern.png") repeat scroll left top;
+    content: "";
+}
+.background-slideshow, .background-slideshow::after {
+    height: 100%;
+    left: 0;
+    list-style: outside none none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1000;
+}

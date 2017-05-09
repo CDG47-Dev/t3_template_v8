@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<div class="top-nav-container {f:if(condition:settings.navigation.type, then:' navbar-fixed-{settings.navigation.type}')}">
+		<div class="wrapper top-nav">
+		    <div>
+				<!-- champ recherche -->
+				<f:cObject typoscriptObjectPath="lib.search"/>
+				<!-- top nav -->
+				<nav class="">
+					<ul class="banner-menu">
+						<li><f:link.page pageUid="{rootPage}">Accueil</f:link.page></li>
+						<!-- social icons-->
+						<li><a href="https://www.facebook.com/Destination-Coeur-de-Lot-et-Garonne-1069413313116986" target="_blank" title="Facebook Destination Coeur de Lot et Garonne (nouvelle fenêtre)"><span class="fa fa-facebook"></span><span class="hors-cadre">Facebook</span></a></li>
+						<!--<li><a href="#"><span class="fa fa-google" target="_blank"/><span class="sr-only">Google+</span></a></li>-->
+						<li><a href="https://twitter.com/DestinatCoeurLG" target="_blank" title="Twitter Destination Coeur de Lot et Garonne (nouvelle fenêtre)"><span class="fa fa-twitter"></span><span class="hors-cadre">Twitter</span></a></li>
+						<!--<li><a href="#"><span class="fa fa-instagram" /><span class="sr-only">Instagram</span></a></li>-->
+					</ul>
+				</nav>
+				<div class="cb-gtranslate">
+					<div id="google_translate_element"></div>
+					<script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'de,en,es,nl', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+					}
+					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			   </div>
+            </div>			  
+            <!-- logo -->
+			<div class="logo">
+            <f:if condition="{settings.logo.file}">
+                <f:then>
+                    <f:link.page pageUid="{rootPage}">
+                        <img src="{f:uri.image(src: settings.logo.file)}" alt="{settings.logo.linktitle}" height="{settings.logo.height}" width="{settings.logo.width}">
+                    </f:link.page>
+                </f:then>
+                <f:else>
+                    <f:link.page pageUid="{rootPage}" class="navbar-brand" title="{settings.logo.linktitle}">{siteTitle}</f:link.page>
+                </f:else>
+            </f:if>			
+			</div>                  
+    </div>	
+</html>

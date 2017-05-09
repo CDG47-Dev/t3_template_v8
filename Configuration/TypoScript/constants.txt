@@ -1,0 +1,108 @@
+############################
+### CUSTOM SUBCATEGORIES ###
+###########################
+
+
+
+##############
+### CONFIG ###
+##############
+config {
+    # cat=t3 template v8: basic/150/010; type=string; label=Domaine du site Internet
+    baseURL = http://example.com
+    #cat=t3 template v8: basic/150/011; type=int; label=GoogleSiteMap: Uid de la page Root pour le fonctionnement de Google SiteMap
+    googlesitemap.rootUid = 1
+    # cat=t3 template v8: basic/enable/010; type=boolean; label=RealUrl: Activer RealUrl
+    realurl = 0
+}
+
+##############
+### PAGE   ###
+##############
+
+page{
+	fluidtemplate{
+		templateRootPath = EXT:t3_template_v8/Resources/Private/Templates/Page/
+		layoutRootPath = EXT:t3_template_v8/Resources/Private/Layouts/Page/
+		partialRootPath = EXT:t3_template_v8/Resources/Private/Partials/Page/
+	
+	}
+	
+	#cat=t3 template v8: basic/150/012; type=int; label=Bandeau: Uid de la page gérant le bandeau
+	bandeau = 10
+	#cat=t3 template v8: basic/150/012; type=int; label=Background-Slideshow: Uid de la page gérant le background
+	background = 11	
+
+	logo {
+	        # cat=t3 template v8: basic/110/100; type=string; label=Logo: Leave blank to use website title from template instead
+	        file = EXT:t3_template_v8/Resources/Public/Images/logo.png
+	        # cat=t3 template v8: basic/110/110; type=string; label=Logo Inverted: Leave blank to use website title from template instead
+	        fileInverted = EXT:bootstrap_package/Resources/Public/Images/BootstrapPackageInverted.png
+	        # cat=t3 template v8: basic/110/120; type=int+; label=Height: The image will not be resized!
+	        height = 129
+	        # cat=t3 template v8: basic/110/130; type=int+; label=Width: The image will not be resized!
+	        width = 240
+	        # cat=t3 template v8: basic/110/140; type=string; label=Alternative text: Text of the alt attribute of the logo image (default: "<website title> logo")
+	        alt =
+	        # cat=t3 template v8: basic/110/150; type=string; label=Link title: Title of the link attribute of the logo image
+	        linktitle =
+	}
+	
+	favicon {
+	        # cat=t3 template v8: basic/111/100; type=string; label=Favicon
+	        file = EXT:bootstrap_package/Resources/Public/Icons/favicon.ico
+	}
+      
+	#Paramètre du champ recherche	
+	search {
+
+		#cat=t3 template v8: Recherche/150/010; type=int; label=page Recherche: Uid de la page Recherche
+		settings.PID = 1
+
+		#cat=t3 template v8: Recherche/160/010; type=string; label=Label Champ Recherche: Titre au dessus du moteur de recherche (laisser vide pour ne rien avoir):
+		defaultInputLabel =
+
+		#cat=t3 template v8: Recherche/160/011; type=string; label= Placeholder du champ recherche
+		defaultInputValue = Saisir votre recherche
+
+		#cat=t3 template v8: Recherche/160/012; type=string; label= Label du bouton recherche
+		defaultSubmitLabel = Rechercher sur tout le site
+
+		#cat=t3 template v8: Recherche/160/013; type=string; label= Texte du bouton recherche:
+		defaultSubmitValue = <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	}
+	
+	theme {
+	
+		# cat=bootstrap package: basic/160/101; type=options[Default=, Fixed Top=top, Fixed Bottom=bottom]; label=Navigation Type
+		navigationtype = top
+	
+	 	# cat=t3 template v8: basic/160/011; type=string; label=Copyright Text: Texte affiché pour la zone Copyright
+		copyright.text = <a href="http://www.cdg47.fr">CDG47</a>
+	}
+	
+	#Paramètre des liens en pied de page
+	footer {
+		# cat=t3 template v8: basic/166/010; type=string; label=Dossiers Uid: Uid des dossiers contenant des sous-pages à afficher en pied de page (séparé par des virgules)
+		navdir = 
+		# cat=t3 template v8: basic/166/011; type=boolean; label=Hors Menu: Inclure ou non les pages hors menu
+		notinmenu = 1
+		# cat=t3 template v8: basic/166/012; type=string; label=Exclusion: Uid des pages à exclure du pied de page (séparé par des virgules)
+		excludelist = 133,134 
+	}
+}
+
+#### BOOTSTRAP LESS CONSTANTS ####
+##################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_template_v8/Configuration/TypoScript/Bootstrap/constants.txt">
+
+##########################################
+### t3 template v8 CONTENT ELEMENTS ###
+##########################################
+plugin.bootstrap_package_contentelements {
+	view{
+	   templateRootPath = EXT:t3_template_v8/Resources/Private/Templates/ContentElements/
+	   layoutRootPath = EXT:t3_template_v8/Resources/Private/Layouts/ContentElements/
+	   partialRootPath  = EXT:t3_template_v8/Resources/Private/Partials/ContentElements/
+	}
+}

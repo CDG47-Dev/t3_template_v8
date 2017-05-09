@@ -1,0 +1,19 @@
+plugin.bootstrap_package {
+    settings {
+        less {
+            	###
+            	### DEFAULT FONT SIZE - Use font size default in navigator parameters
+				###
+              	
+				# cat=bootstrap package: styling/302/font-size-base; type=string; label=@font-size-base:
+				font-size-base = 1em
+
+				# cat=bootstrap package: styling/333/carousel-control-font-size; type=string; label=@carousel-control-font-size:
+				carousel-control-font-size = 1.250em
+
+				# cat=bootstrap package: styling/313/navbar-height; type=string; label=@navbar-height:
+				navbar-height = 30px
+		
+        }
+    }
+}
