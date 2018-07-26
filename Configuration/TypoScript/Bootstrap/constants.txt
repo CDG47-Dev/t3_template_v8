@@ -13,6 +13,15 @@ plugin.bootstrap_package {
 
 				# cat=bootstrap package: styling/313/navbar-height; type=string; label=@navbar-height:
 				navbar-height = 30px
+				
+				###
+				### CUSTOM VARIABLES START
+				###
+				# cat=bootstrap package: basic/160/100; type=options[Lora=Lora, Merriweather=Merriweather, Raleway=Raleway, Roboto=Roboto, Source Sans Pro=Source Sans Pro, Ubuntu=Ubuntu]; label=Google Webfont
+				google-webfont = Roboto		
+				
+				# cat=bootstrap package: styling/300/brand-primary; type=string; label=@brand-primary:
+				brand-primary = #97d700			
 		
         }
     }

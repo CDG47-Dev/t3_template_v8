@@ -90,11 +90,22 @@ page{
 		# cat=t3 template v8: basic/166/012; type=string; label=Exclusion: Uid des pages à exclure du pied de page (séparé par des virgules)
 		excludelist = 133,134 
 	}
+
+	#Paramètre fichier javascript météo
+	weather{
+		# cat=t3 weather: basic/150/020; type=string; label= Script Météo: Chemin du fichier javascript
+		jsWeather = EXT:t3_template_v8/Resources/Public/Js/weather.js
+    }
 }
 
 #### BOOTSTRAP LESS CONSTANTS ####
 ##################################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_template_v8/Configuration/TypoScript/Bootstrap/constants.txt">
+
+#### Rx_Shariff
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rx_shariff')]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_template_v8/Configuration/TypoScript/Extension/Rx_Shariff/constants.typoscript">
+#### Rx_Shariff
 
 ##########################################
 ### t3 template v8 CONTENT ELEMENTS ###

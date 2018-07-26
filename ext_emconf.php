@@ -14,11 +14,12 @@ $EM_CONF[$_EXTKEY] = array(
     'category' => 'fe',
     'constraints' => array(
         'depends' => array(
-            'bootstrap_package' => '8.0.0 - 8.99.99',
+            'bootstrap_package' => '8.0.0 - 9.99.99',
             'typo3' => '8.7.0 - 8.99.99',
 			'indexed_search' => '8.7.0 - 8.99.99',
 			'dd_googlesitemap' => '2.1.3 - 8.99.99',
 			'realurl' => '2.2.0 - 8.99.99', 
+			't3_weather' => '0.0.1 - 8.99.99', 
         ),
         'conflicts' => array(),
     ),

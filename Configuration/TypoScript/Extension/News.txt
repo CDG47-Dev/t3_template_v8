@@ -1,0 +1,30 @@
+# ==============================================
+# FE-Plugin configuration for EXT:news
+# ==============================================
+plugin.tx_news {
+	# ====================================
+	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
+	# ====================================
+	settings {
+		facebookLocale = fr_FR
+		detail.media {
+			 image {
+					 maxWidth = 320
+					 maxHeight =
+
+			 # If using fluid_styled_content
+			 lightbox {
+				 enabled = 1
+				 class = lightbox
+				 width = 1024
+				 height = 820
+			 }
+
+
+			 video {
+					 width = 282
+					 height = 300
+			 }
+		}
+	}
+}

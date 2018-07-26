@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 	<div class="top-nav-container {f:if(condition:settings.navigation.type, then:' navbar-fixed-{settings.navigation.type}')}">
-		<div class="wrapper top-nav">
+		<div class="wrapper top-nav container">
 		    <div>
 				<!-- champ recherche -->
 				<f:cObject typoscriptObjectPath="lib.search"/>
@@ -9,9 +9,9 @@
 					<ul class="banner-menu">
 						<li><f:link.page pageUid="{rootPage}">Accueil</f:link.page></li>
 						<!-- social icons-->
-						<li><a href="https://www.facebook.com/Destination-Coeur-de-Lot-et-Garonne-1069413313116986" target="_blank" title="Facebook Destination Coeur de Lot et Garonne (nouvelle fenêtre)"><span class="fa fa-facebook"></span><span class="hors-cadre">Facebook</span></a></li>
+						<li><a href="https://www.facebook.com/Destination-Coeur-de-Lot-et-Garonne-1069413313116986" target="_blank" title="Facebook Destination Coeur de Lot et Garonne (nouvelle fenêtre)"><span class="fab fa-facebook-f"></span><span class="hors-cadre">Facebook</span></a></li>
 						<!--<li><a href="#"><span class="fa fa-google" target="_blank"/><span class="sr-only">Google+</span></a></li>-->
-						<li><a href="https://twitter.com/DestinatCoeurLG" target="_blank" title="Twitter Destination Coeur de Lot et Garonne (nouvelle fenêtre)"><span class="fa fa-twitter"></span><span class="hors-cadre">Twitter</span></a></li>
+						<li><a href="https://twitter.com/DestinatCoeurLG" target="_blank" title="Twitter Destination Coeur de Lot et Garonne (nouvelle fenêtre)"><span class="fab fa-twitter"></span><span class="hors-cadre">Twitter</span></a></li>
 						<!--<li><a href="#"><span class="fa fa-instagram" /><span class="sr-only">Instagram</span></a></li>-->
 					</ul>
 				</nav>

@@ -24,6 +24,7 @@ page{
 
     10 = FLUIDTEMPLATE
     10 {
+	
 		#################
 		### VARIABLES ###
 		#################
@@ -83,6 +84,10 @@ page{
 	includeCSS {
 		gabarit = EXT:t3_template_v8/Resources/Public/Less/gabarit.less		
 	}	
+
+	includeJSFooter {
+		main = EXT:t3_template_v8/Resources/Public/Js/main.js	
+	}	
 	
 }	
 
@@ -119,6 +124,10 @@ page{
 	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_template_v8/Configuration/TypoScript/Extension/IndexedSearch.txt">
 	[global]
 
+	#### INDEXED SEARCH
+	[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_template_v8/Configuration/TypoScript/Extension/News.txt">
+	[global]
 	#search
 	lib.search = COA_INT
 	lib.search {
@@ -152,3 +161,10 @@ page{
 		
 	#### Google Site Map
 	tx_ddgooglesitemap.forceStartPid = {$config.googlesitemap.rootUid}
+
+#### rx_shariff
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rx_shariff')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome/setup.txt">
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_template_v8/Configuration/TypoScript/Extension/Rx_Shariff/setup.typoscript">
+[global]
+#### rx_shariff

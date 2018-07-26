@@ -23,15 +23,17 @@ header{
 	}
 	.top-nav {
 		 display: block;
+		 position: relative;
 		 height: @navbar-height;
 		 > div{
 			float: right;
 		}
 		ul {
 		    margin-bottom: 0;
+			padding-right: 10px;
 			li {
 				display: inline-block;
-				font-size: 0.6em;
+				font-size: 0.9em;
 				list-style: outside none none;
 				padding-left: 10px;
 			}
@@ -59,25 +61,109 @@ header{
 		z-index: 2000;
 	}
 }
+.scrolled{
+	.logo {
+		img {
+			height: 55px;
+			width: auto;
+		}
+	}	
+}
+
+//
+// Menu Top
+// --------------------------------------------------
+.navbar-main{
+	& > li.dropdown{
+		& > a{
+			color: #222;
+			& > .caret{
+				display: inline-block;
+			}
+		}
+	}
+	.dropdown-menu{
+		background-color: #222;
+		color: #fff;
+		> li{
+			> a{
+				color: #fff;
+				&:hover, &:focus{
+					background-color: #ec6608;
+				}
+			}
+		}
+	}
+}
+
+.navbar-default{
+	.navbar-nav{
+		> li{
+			> a{
+				color: #222;
+				.bar{
+					background-color: #ec6608;
+				}
+			}
+		}
+	}
+}
 
 //
 // Main Section
 // --------------------------------------------------
+.breadcrumb-section {
+    margin-bottom: 0em;
+}
 .main-section{
 	.container{
 		background: rgba(255, 255, 255, 0.9);
 		
 	}
+	& > div.section{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.frame-jumbotron{
+		background-color: #ec6608;
+	}
 }
 
+//
+// Footer
+// --------------------------------------------------
+footer {
+	.footer-section{
+		background-color: rgba(151,215,0,0.75);
+		color: #226;
+		font-size:0.9em;
+		padding:0;
+		header{
+			h1,h2,h3,h4,h5,h6{
+				color: #226;
+				border-bottom: 1px solid;
+				text-transform: uppercase;
+				padding-top: 10px;
+				padding-bottom: 5px;
+			}
+		}
+		a{
+			color: #226;
+		}
+		ul{
+			list-style: none;
+			padding-left: 5px;
+		}
+	}
+}
 
 //
 // Background-slideshow
 // --------------------------------------------------
-.background-slideshow::after {
-    background: transparent url("../Images/backgrounds/pattern.png") repeat scroll left top;
-    content: "";
-}
+//.background-slideshow::after {
+ //   background: transparent url("../Images/backgrounds/pattern.png") repeat scroll left top;
+  //  content: "";
+//}
 .background-slideshow, .background-slideshow::after {
     height: 100%;
     left: 0;
@@ -86,4 +172,110 @@ header{
     top: 0;
     width: 100%;
     z-index: -1000;
+}
+
+//
+// Title
+// --------------------------------------------------
+.section{
+	header{
+		h1,h2,h3,h4,h5,h6{
+			color: #a24901;
+			border-bottom: 1px solid;
+			text-transform: uppercase;
+			padding-left: 10px;
+			padding-top: 10px;
+			padding-bottom: 5px;
+		}
+		h2 + h3 {
+			text-transform: none;
+			border-bottom: none;
+			color: #333;
+			padding-top: 0;
+		}
+	}
+}
+
+//
+// Menu width Thumbnail - Caption
+// --------------------------------------------------
+.thumbnail-menu-caption {
+    margin-top: -40px;
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(200,200,200,0.7);
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+//
+// News - 3 colonnes
+// --------------------------------------------------
+.news {
+	.trois-colonnes{
+		.article{
+			.news-img-wrap{
+				width: 100%;
+			}
+			.news-list-date{
+				display: none;
+			}
+			h1,h2,h3,h4,h5,h6{
+				font-size: 1.4em;
+			}
+			a{
+				color: #a24901;
+			}			
+		}
+	}
+	&.news-single {
+		.teaser-text{
+			color: #ec6608;
+			font-size: 1em;
+			font-weight: 700;			
+		}
+	}
+}
+
+//
+// Bootstrap Panel Style
+//--------------------------------------------------
+.panel-group{
+	.panel, .panel-heading {
+	 	border:none !important;
+	}
+	.panel-body {
+		border: 1px solid #ddd !important; 
+	  	border-width: 0 1px 1px 1px !important;
+	}
+	.panel-heading a, a.panel-heading {
+		outline: 0;
+	}
+	.panel-heading a:hover,.panel-heading a:focus, a.panel-heading:hover, a.panel-heading:focus {
+		text-decoration: none;	
+	}
+
+	.panel-heading{
+		.badge{
+			float: right;
+		}
+		.icon-indicator {
+			margin-right: 10px;
+		}
+		.icon-indicator:before {
+			content:"\e080";
+		}
+		a[aria-expanded="true"] .icon-indicator:before {
+			content:"\e114";
+		}
+	}
+}
+//
+// Bootstrap Panel Style
+//--------------------------------------------------
+.form-control{
+	height: 2em;
 }
